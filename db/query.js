@@ -16,6 +16,10 @@ function getLocation(id){
   return db('location').select('*').where('user_id', id).innerJoin('user', 'user_id', 'user.id')
 }
 
+function getAllLocations(){
+  return db('location').select('*')
+}
+
 function getToDo(id){
   return db('todo').select('*').where('location_id', id)
 }
@@ -45,10 +49,11 @@ module.exports = {
   getUserById,
   getConnections,
   getLocation,
+  getAllLocations,
   getToDo,
   getRecs,
   createUser,
   updateUser,
   deleteUser,
-  
+
 }

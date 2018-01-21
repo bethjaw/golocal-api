@@ -33,6 +33,13 @@ router.get('/location/:id', (req, res) => {
     })
 })
 
+router.get('/locations', (req, res) => {
+  query.getAllLocations()
+    .then((locations) => {
+      res.json(locations)
+    })
+})
+
 router.get('/todo/:id', (req, res) => {
   let locId = req.params.id
   query.getToDo(locId)
