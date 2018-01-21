@@ -28,6 +28,16 @@ function createUser(user){
   return db('user').insert(user).returning('*')
 }
 
+function updateUser(info, id){
+  return db('user').update(info).where('id', id).returning('*')
+}
+
+function deleteUser(id){
+  return db('user').delete().where('id', id)
+}
+
+// createConnection
+// addLocation
 
 
 module.exports = {
@@ -38,5 +48,7 @@ module.exports = {
   getToDo,
   getRecs,
   createUser,
-
+  updateUser,
+  deleteUser,
+  
 }

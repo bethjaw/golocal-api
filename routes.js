@@ -56,6 +56,21 @@ router.put('/user', (req, res) => {
     })
 })
 
+router.put('/updateUser/:id', (req, res) => {
+  let id = req.params.id
+  let info = req.body
+  query.updateUser(info, id)
+    .then((userInfo) => {
+      res.json(userInfo)
+    })
+})
 
+router.delete('/deleteUser/:id', (req, res) => {
+  let id = req.params.id
+  query.deleteUser(id)
+    .then((deleted) => {
+      res.json()
+    })
+})
 
 module.exports = router
