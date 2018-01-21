@@ -6,7 +6,7 @@ exports.seed = function(knex, Promise) {
       // Inserts seed entries
       return knex('location').insert([
         {
-          id: 1,
+          // id: 1,
           location: 'Banff',
           country: 'Canada',
           type: 'National Park',
@@ -14,7 +14,7 @@ exports.seed = function(knex, Promise) {
           transportation: 'We rented an RV in Calgary!',
         },
         {
-          id: 2,
+          // id: 2,
           location: 'Reykjavík',
           country: 'Iceland' ,
           type: 'City',
@@ -22,7 +22,7 @@ exports.seed = function(knex, Promise) {
           transportation: 'Used public transportation',
         },
         {
-          id: 3,
+          // id: 3,
           location: 'Maui',
           country: 'Hawaii',
           type: 'City',
