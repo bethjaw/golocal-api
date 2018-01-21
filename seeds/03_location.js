@@ -19,7 +19,7 @@ exports.seed = function(knex, Promise) {
           country: 'Iceland' ,
           type: 'City',
           user_id: 3,
-          transportation: 'Used public transportation',
+          transportation: 'Definitely recommend renting a car and doing the driving yourself. Rent a 4 wheel drive car, but not necessarily the cool instagram worthy land rovers. Totally unnecessary and can be unsafe in different weather conditions.',
         },
         {
           id: 300,

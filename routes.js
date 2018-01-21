@@ -26,8 +26,8 @@ router.get('/connection/:id', (req, res) => {
 })
 
 router.get('/location/:id', (req, res) => {
-  let userId = req.params.id
-  query.getLocation(userId)
+  let id = req.params.id
+  query.getLocation(id)
     .then((location) => {
       res.json(location)
     })
