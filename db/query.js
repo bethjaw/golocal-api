@@ -17,7 +17,7 @@ function getLocation(id){
 }
 
 function getAllLocations(){
-  return db('location').select('*')
+  return db('location').select('*').innerJoin('user', 'user_id', 'user.id')
 }
 
 function getToDo(id){
