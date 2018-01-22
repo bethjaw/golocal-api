@@ -13,11 +13,11 @@ function getConnections(id){
 }
 
 function getLocation(id){
-  return db('location').select('*').where('user_id', id).innerJoin('user', 'user_id', 'user.id')
+  return db('location').select('*').where('id', id)
 }
 
 function getAllLocations(){
-  return db('location').select('*').innerJoin('user', 'user_id', 'user.id')
+  return db('location').select('*')
 }
 
 function getToDo(id){

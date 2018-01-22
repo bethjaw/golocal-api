@@ -11,6 +11,7 @@ exports.seed = function(knex, Promise) {
           email: 'hello@bethjaw.com',
           password: 'capstones',
           avatar: '',
+          location_id: null
         },
         {
           // id: 2,
@@ -18,6 +19,7 @@ exports.seed = function(knex, Promise) {
           email: 'emma@email.com',
           password: 'capstones',
           avatar: '',
+          location_id: 100,
         },
         {
           // id: 3,
@@ -25,6 +27,7 @@ exports.seed = function(knex, Promise) {
           email: 'anne@email.com',
           password: 'capstones',
           avatar: '',
+          location_id: 200,
         },
         {
           // id: 4,
@@ -32,6 +35,7 @@ exports.seed = function(knex, Promise) {
           email: 'megan@email.com',
           password: 'capstones',
           avatar: '',
+          location_id: 300,
         },
         {
           // id: 5,
@@ -39,6 +43,7 @@ exports.seed = function(knex, Promise) {
           email: 'margo@email.com',
           password: 'capstones',
           avatar: '',
+          location_id: null,
         },
         {
           // id: 6,
@@ -46,6 +51,7 @@ exports.seed = function(knex, Promise) {
           email: 'ryan@email.com',
           password: 'capstones',
           avatar: '',
+          location_id: null,
         },
       ]);
     });
