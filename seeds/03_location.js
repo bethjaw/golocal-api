@@ -12,7 +12,7 @@ exports.seed = function(knex, Promise) {
           type: 'National Park',
           user_id: 2,
           transportation: 'We rented an RV in Calgary!',
-          location_image: '',
+          location_image: 'https://s3.us-east-2.amazonaws.com/golocal-capstone/banff1.jpg',
         },
         {
           id: 200,
