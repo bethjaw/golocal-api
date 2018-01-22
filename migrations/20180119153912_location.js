@@ -8,6 +8,7 @@ exports.up = function(knex, Promise) {
       table.string('type')
       table.integer('user_id')
       table.string('transportation')
+      table.text('location_image')
     })
   ])
 };
