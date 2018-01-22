@@ -9,7 +9,7 @@ function getUserById(id){
 }
 
 function getConnections(id){
-  return db('connection').select('*').where('user_id_1', id).innerJoin('user', 'user_id_2', 'user.id')
+  return db('connection').select('*').where('user_id_1', id).innerJoin('user', 'user_id_2', 'user.id').innerJoin('location', 'user_id', 'user.id')
 }
 
 function getLocation(id){
