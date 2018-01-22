@@ -30,7 +30,7 @@ exports.seed = function(knex, Promise) {
           type: 'City',
           user_id: 4,
           transportation: 'We rented a car',
-          location_image: ''
+          location_image: 'https://s3.us-east-2.amazonaws.com/golocal-capstone/maui.png'
         },
       ]);
     });

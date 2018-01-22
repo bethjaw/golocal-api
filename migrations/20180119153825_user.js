@@ -7,7 +7,6 @@ exports.up = function(knex, Promise) {
       table.string('email')
       table.string('password')
       table.text('avatar')
-      table.integer('location_id')
     })
   ])
 };
