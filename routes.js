@@ -17,11 +17,19 @@ router.get('/user/:id', (req, res) => {
     })
 })
 
-router.get('/connection/:id', (req, res) => {
+router.get('/connectlocate/:id', (req, res) => {
   let id = req.params.id
-  query.getConnections(id)
+  query.getConnectionLocation(id)
     .then((connection) => {
       res.json(connection)
+    })
+})
+
+router.get('/connections/:id', (req, res) => {
+  let id = req.params.id
+  query.getConnections(id)
+    .then((connections) => {
+      res.json(connections)
     })
 })
 

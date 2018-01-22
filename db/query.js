@@ -8,8 +8,12 @@ function getUserById(id){
   return db('user').select('*').where('id', id)
 }
 
-function getConnections(id){
+function getConnectionLocation(id){
   return db('connection').select('*').where('user_id_1', id).innerJoin('user', 'user_id_2', 'user.id').innerJoin('location', 'user_id', 'user.id')
+}
+
+function getConnections(id){
+  return db('connection').select('*').where('user_id_1', id).innerJoin('user', 'user_id_2', 'user.id')
 }
 
 function getLocation(id){
@@ -47,6 +51,7 @@ function deleteUser(id){
 module.exports = {
   getUsers,
   getUserById,
+  getConnectionLocation,
   getConnections,
   getLocation,
   getAllLocations,
