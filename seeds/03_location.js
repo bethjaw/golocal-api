@@ -32,6 +32,15 @@ exports.seed = function(knex, Promise) {
           transportation: 'We rented a car',
           location_image: 'https://s3.us-east-2.amazonaws.com/golocal-capstone/maui.png'
         },
+        {
+          id: 400,
+          location: 'Dublin',
+          country: 'Ireland',
+          type: 'City',
+          user_id: 4,
+          transportation: 'We took a bus tour of southern and western Ireland through CIE Tours and it was fabulous. I was definitely one of the youngest people on the bus but it was a great way to travel the country, especially as a first timer to Europe.',
+          location_image: 'https://s3.us-east-2.amazonaws.com/golocal-capstone/ireland1.png'
+        },
       ]);
     });
 };
