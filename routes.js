@@ -48,6 +48,14 @@ router.get('/locations', (req, res) => {
     })
 })
 
+router.get('/locationByUser/:id', (req, res) => {
+  let id = req.params.id
+  query.getLocationByUser(id)
+    .then((location) => {
+      res.json(location)
+    })
+})
+
 router.get('/todo/:id', (req, res) => {
   let locId = req.params.id
   query.getToDo(locId)

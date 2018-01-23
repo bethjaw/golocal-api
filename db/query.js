@@ -20,6 +20,10 @@ function getLocation(id){
   return db('location').select('*').where('id', id)
 }
 
+function getLocationByUser(id){
+  return db('location').select('*').where('user_id', id)
+}
+
 function getAllLocations(){
   return db('location').select('*')
 }
@@ -54,6 +58,7 @@ module.exports = {
   getConnectionLocation,
   getConnections,
   getLocation,
+  getLocationByUser,
   getAllLocations,
   getToDo,
   getRecs,
