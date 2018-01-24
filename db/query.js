@@ -36,20 +36,32 @@ function getRecs(id){
   return db('genrecs').select('*').where('location_id', id)
 }
 
+
+// CREATE
 function createUser(user){
   return db('user').insert(user).returning('*')
 }
 
+function addLocationToUser(id, location){
+  return db('location').insert(location).where('user_id', id).returning('*')
+}
+
+// UPDATE
 function updateUser(info, id){
   return db('user').update(info).where('id', id).returning('*')
 }
 
+
+// DELETE
 function deleteUser(id){
   return db('user').delete().where('id', id)
 }
 
+
+
+
 // createConnection
-// addLocation
+
 
 
 module.exports = {
@@ -63,6 +75,7 @@ module.exports = {
   getToDo,
   getRecs,
   createUser,
+  addLocationToUser,
   updateUser,
   deleteUser,
 

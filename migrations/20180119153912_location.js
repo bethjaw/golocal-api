@@ -5,7 +5,6 @@ exports.up = function(knex, Promise) {
       table.increments()
       table.string('location')
       table.string('country')
-      table.string('type')
       table.integer('user_id')
       table.string('transportation')
       table.text('location_image')

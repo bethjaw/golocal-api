@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const query = require('./db/query')
 
+// READ
 router.get('/user', (req, res) => {
   query.getUsers()
     .then((user) => {
@@ -72,6 +73,8 @@ router.get('/recs/:id', (req, res) => {
     })
 })
 
+
+// CREATE
 router.put('/user', (req, res) => {
   query.createUser(req.body)
     .then((user) => {
@@ -79,6 +82,17 @@ router.put('/user', (req, res) => {
     })
 })
 
+router.put('/addLocation/:id', (req, res) => {
+  let id = req.params.id
+  let location = req.body
+  query.addLocationToUser(id, location)
+    .then((newlocation) => {
+      res.json(newlocation)
+    })
+})
+
+
+// UPDATE
 router.put('/updateUser/:id', (req, res) => {
   let id = req.params.id
   let info = req.body
@@ -88,6 +102,7 @@ router.put('/updateUser/:id', (req, res) => {
     })
 })
 
+// DELETE
 router.delete('/deleteUser/:id', (req, res) => {
   let id = req.params.id
   query.deleteUser(id)
