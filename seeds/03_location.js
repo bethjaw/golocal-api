@@ -7,10 +7,10 @@ exports.seed = function(knex, Promise) {
       return knex('location').insert([
         {
           id: 100,
-          location: 'Banff (National Park)',
+          location: 'Banff',
           country: 'Canada',
           user_id: 2,
-          transportation: 'We rented an RV in Calgary!',
+          transportation: 'We rented an RV in Calgary to drive around and camp the National Park!',
           location_image: 'https://s3.us-east-2.amazonaws.com/golocal-capstone/canada.png',
         },
         {

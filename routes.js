@@ -75,14 +75,14 @@ router.get('/recs/:id', (req, res) => {
 
 
 // CREATE
-router.put('/user', (req, res) => {
+router.post('/user', (req, res) => {
   query.createUser(req.body)
     .then((user) => {
       res.json(user)
     })
 })
 
-router.put('/addLocation/:id', (req, res) => {
+router.post('/addLocation/:id', (req, res) => {
   let id = req.params.id
   let location = req.body
   query.addLocationToUser(id, location)
