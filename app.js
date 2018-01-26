@@ -24,7 +24,8 @@ app.get('/aws', (req, res) => {
   }
 
   s3.getSignedUrl('putObject', params, function (err, url) {
-    res.json({url})
+    console.log(err);
+    res.json({url, id})
   });
 })
 
