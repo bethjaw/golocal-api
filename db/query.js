@@ -46,6 +46,15 @@ function addLocationToUser(id, location){
   return db('location').insert(location).where('user_id', id).returning('*')
 }
 
+function addToDo(id, todo){
+  return db('todo').insert(todo).where('location_id', id)
+}
+
+function addGenRec(id, genrec){
+  return db('genrecs').insert(genrec).where('location_id', id)
+}
+
+
 // UPDATE
 function updateUser(info, id){
   return db('user').update(info).where('id', id).returning('*')
@@ -76,6 +85,8 @@ module.exports = {
   getRecs,
   createUser,
   addLocationToUser,
+  addToDo,
+  addGenRec,
   updateUser,
   deleteUser,
 

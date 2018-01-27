@@ -91,6 +91,24 @@ router.post('/addLocation/:id', (req, res) => {
     })
 })
 
+router.post('/addtodo/:id', (req, res) => {
+  let id = req.params.id
+  let todo = req.body
+  query.addToDo(id, todo)
+    .then((newTodo) => {
+      res.json(newTodo)
+  })
+})
+
+router.post('/addgenrec/:id', (req, res) => {
+  let id = req.params.id
+  let genrec = req.body
+  query.addGenRec(id, genrec)
+    .then((newRec) => {
+      res.json(newRec)
+  })
+})
+
 
 // UPDATE
 router.put('/updateUser/:id', (req, res) => {
