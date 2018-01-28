@@ -36,10 +36,11 @@ function getRecs(id){
   return db('genrecs').select('*').where('location_id', id)
 }
 
+
 function getBucketList(id){
-  return db('bucketlist').select('*').where('user_id', id)
-  // .innerJoin('location', 'user_id', 'user.id')
+  return db('bucketlist').select('*').where('location_id', id).innerJoin('location', 'location.id', 'location_id')
 }
+
 
 
 // CREATE
@@ -76,9 +77,7 @@ function deleteUser(id){
 }
 
 
-
 // createConnection
-
 
 
 module.exports = {

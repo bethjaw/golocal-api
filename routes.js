@@ -73,6 +73,7 @@ router.get('/recs/:id', (req, res) => {
     })
 })
 
+
 router.get('/bucketlist/:id', (req, res) => {
   let id = req.params.id
   query.getBucketList(id)
