@@ -54,6 +54,10 @@ function addGenRec(id, genrec){
   return db('genrecs').insert(genrec).where('location_id', id)
 }
 
+// function addToBucketList(id, location){
+//   return db('bucketlist').insert(location).where('user_id', id)
+// }
+
 
 // UPDATE
 function updateUser(info, id){
@@ -65,7 +69,6 @@ function updateUser(info, id){
 function deleteUser(id){
   return db('user').delete().where('id', id)
 }
-
 
 
 
