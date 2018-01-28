@@ -126,7 +126,7 @@ router.post('/addgenrec/:id', (req, res) => {
   })
 })
 
-router.post('/addBucklist/:id', (req, res) => {
+router.post('/addBucketlist/:id', (req, res) => {
   let id = req.params.id
   let location = req.body
   query.addToBucketList(id, location)
