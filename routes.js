@@ -73,6 +73,14 @@ router.get('/recs/:id', (req, res) => {
     })
 })
 
+router.get('/bucketlist/:id', (req, res) => {
+  let id = req.params.id
+  query.getBucketList(id)
+    .then((list) => {
+      res.json(list)
+    })
+})
+
 
 // CREATE
 router.post('/user', (req, res) => {
@@ -107,6 +115,15 @@ router.post('/addgenrec/:id', (req, res) => {
     .then((newRec) => {
       res.json(newRec)
   })
+})
+
+router.post('/addBucklist/:id', (req, res) => {
+  let id = req.params.id
+  let location = req.body
+  query.addToBucketList(id, location)
+    .then((list) => {
+      res.json(list)
+    })
 })
 
 

@@ -36,6 +36,11 @@ function getRecs(id){
   return db('genrecs').select('*').where('location_id', id)
 }
 
+function getBucketList(id){
+  return db('bucketlist').select('*').where('user_id', id)
+  // .innerJoin('location', 'user_id', 'user.id')
+}
+
 
 // CREATE
 function createUser(user){
@@ -54,9 +59,9 @@ function addGenRec(id, genrec){
   return db('genrecs').insert(genrec).where('location_id', id)
 }
 
-// function addToBucketList(id, location){
-//   return db('bucketlist').insert(location).where('user_id', id)
-// }
+function addToBucketList(id, location){
+  return db('bucketlist').insert(location).where('user_id', id)
+}
 
 
 // UPDATE
@@ -86,10 +91,12 @@ module.exports = {
   getAllLocations,
   getToDo,
   getRecs,
+  getBucketList,
   createUser,
   addLocationToUser,
   addToDo,
   addGenRec,
+  addToBucketList,
   updateUser,
   deleteUser,
 

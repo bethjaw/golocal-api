@@ -35,17 +35,17 @@ exports.seed = function(knex, Promise) {
         },
         {
           // id: 5,
-          name: 'Margo',
-          email: 'margo@email.com',
+          name: 'Ashley',
+          email: 'ashley@email.com',
           password: 'capstones',
-          avatar: 'https://s3.us-east-2.amazonaws.com/golocal-capstone/user.png',
+          avatar: 'https://s3.us-east-2.amazonaws.com/golocal-capstone/ashley.png',
         },
         {
           // id: 6,
           name: 'Ryan',
           email: 'ryan@email.com',
           password: 'capstones',
-          avatar: 'https://s3.us-east-2.amazonaws.com/golocal-capstone/user.png',
+          avatar: 'https://s3.us-east-2.amazonaws.com/golocal-capstone/ryan.png',
         },
       ]);
     });
