@@ -37,13 +37,10 @@ function getRecs(id){
 }
 
 
-function getBucketList(id){
-  return db('bucketlist').select('*').where('location_id', id).innerJoin('location', 'location.id', 'location_id')
+function getBucket(id){
+  return db('bucketlist').select('*').where('user_id', id)
 }
 
-function getUserBucket(id){
-  return db('bucketlist').select('*').where('id', id)
-}
 
 
 // CREATE
@@ -93,8 +90,7 @@ module.exports = {
   getAllLocations,
   getToDo,
   getRecs,
-  getBucketList,
-  getUserBucket,
+  getBucket,
   createUser,
   addLocationToUser,
   addToDo,

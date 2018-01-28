@@ -74,21 +74,14 @@ router.get('/recs/:id', (req, res) => {
 })
 
 
-router.get('/bucketlist/:id', (req, res) => {
+router.get('/bucket/:id', (req, res) => {
   let id = req.params.id
-  query.getBucketList(id)
-    .then((list) => {
-      res.json(list)
-    })
+  query.getBucket(id)
+  .then((bucket) => {
+    res.json(bucket)
+  })
 })
 
-router.get('/userBucket/:id', (req, res) => {
-  let id = req.params.id
-  query.getUserBucket(id)
-    .then((list) => {
-      res.json(list)
-    })
-})
 
 
 // CREATE
@@ -134,6 +127,8 @@ router.post('/addBucketlist/:id', (req, res) => {
       res.json(list)
     })
 })
+
+
 
 
 // UPDATE
