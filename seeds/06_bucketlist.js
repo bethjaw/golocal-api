@@ -6,9 +6,11 @@ exports.seed = function(knex, Promise) {
       // Inserts seed entries
       return knex('bucketlist').insert([
         {
-          // id: 1, 
+          // id: 1,
           user_id: 1,
-          location_id: 100
+          location_id: 100,
+          location_location: 'Banff',
+          location_country: 'Canada'
         },
       ]);
     });

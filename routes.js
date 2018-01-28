@@ -82,6 +82,14 @@ router.get('/bucketlist/:id', (req, res) => {
     })
 })
 
+router.get('/userBucket/:id', (req, res) => {
+  let id = req.params.id
+  query.getUserBucket(id)
+    .then((list) => {
+      res.json(list)
+    })
+})
+
 
 // CREATE
 router.post('/user', (req, res) => {
